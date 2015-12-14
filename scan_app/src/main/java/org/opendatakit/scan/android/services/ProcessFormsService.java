@@ -46,11 +46,6 @@ public class ProcessFormsService extends IntentService {
   @Override
   public void onHandleIntent(Intent intent) {
 
-    final Context context = getApplicationContext();
-    final int notificationId = (int) (Math.random() * 9999999);
-    final NotificationManager notificationManager = (NotificationManager) getSystemService(
-        Context.NOTIFICATION_SERVICE);
-
     // Retrieve input parameters
     final Bundle extras = intent.getExtras();
     if (extras == null) {
@@ -62,6 +57,16 @@ public class ProcessFormsService extends IntentService {
       Log.e(LOG_TAG, this.getString(R.string.error_background_exception));
       Log.e(LOG_TAG, this.getString(R.string.error_missing_config));
     }
+
+    processForm(extras, configJSON);
+
+  }
+
+  private void processForm(Bundle extras, String configJSON) {
+    final Context context = getApplicationContext();
+    final int notificationId = (int) (Math.random() * 9999999);
+    final NotificationManager notificationManager = (NotificationManager) getSystemService(
+        Context.NOTIFICATION_SERVICE);
 
     // Send a notification that we have begun processing the form
     Intent waitingIntent = new Intent(context, DisplayStatusActivity.class);
@@ -119,7 +124,6 @@ public class ProcessFormsService extends IntentService {
 
     resultNotification.flags |= Notification.FLAG_AUTO_CANCEL;
     notificationManager.notify(notificationId, resultNotification);
-
   }
 
 }

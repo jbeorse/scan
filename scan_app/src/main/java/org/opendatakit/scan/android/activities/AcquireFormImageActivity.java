@@ -106,6 +106,7 @@ public class AcquireFormImageActivity extends BaseActivity {
       // to save the picture
       try {
         prepareToProcessForm();
+        prepareOutputDir();
       } catch (Exception e) {
         failAndReturn(e.toString());
         finish();
@@ -254,6 +255,7 @@ public class AcquireFormImageActivity extends BaseActivity {
         }
 
         prepareToProcessForm();
+        prepareOutputDir();
 
         // Copy the new file into the Scan file system
         destFile = new File(ScanUtils.getPhotoPath(photoName));
@@ -307,6 +309,22 @@ public class AcquireFormImageActivity extends BaseActivity {
     finish();
   }
 
+  private void prepareOutputDir() throws Exception {
+    String outputPath = ScanUtils.getOutputPath(photoName);
+
+    //Try to create an output folder
+    boolean createSuccess = new File(outputPath).mkdirs();
+    if (!createSuccess) {
+      throw (new Exception("Could not create output folder [" + outputPath + "].\n"
+          + "There may be a problem with the device's storage."));
+    }
+    //Create an output directory for the segments
+    boolean segDirSuccess = new File(outputPath, "segments").mkdirs();
+    if (!segDirSuccess) {
+      throw (new Exception("Could not create output folder for segments."));
+    }
+  }
+
   /**
    * Create the file structure for storing the scan data
    */
@@ -343,18 +361,6 @@ public class AcquireFormImageActivity extends BaseActivity {
     processPhoto = new Intent(this, ProcessFormsService.class);
     processPhoto.putExtra("photoName", photoName);
     processPhoto.putExtra("config", config.toString());
-
-    //Try to create an output folder
-    boolean createSuccess = new File(outputPath).mkdirs();
-    if (!createSuccess) {
-      throw (new Exception("Could not create output folder [" + outputPath + "].\n"
-          + "There may be a problem with the device's storage."));
-    }
-    //Create an output directory for the segments
-    boolean segDirSuccess = new File(outputPath, "segments").mkdirs();
-    if (!segDirSuccess) {
-      throw (new Exception("Could not create output folder for segments."));
-    }
   }
 
   /**
@@ -374,6 +380,7 @@ public class AcquireFormImageActivity extends BaseActivity {
     for (File curr : dir.listFiles(ScanUtils.imageFilter)) {
       try {
         prepareToProcessForm();
+        prepareOutputDir();
 
         // Copy the new file into the Scan file system
         File destFile = new File(ScanUtils.getPhotoPath(photoName));
