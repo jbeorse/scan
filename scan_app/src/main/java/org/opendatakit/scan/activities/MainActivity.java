@@ -16,6 +16,7 @@
 package org.opendatakit.scan.activities;
 
 import java.io.File;
+import java.util.concurrent.CountDownLatch;
 
 import android.app.*;
 import org.opendatakit.common.android.activities.BaseActivity;
@@ -43,6 +44,7 @@ import org.opendatakit.scan.fragments.InitializationFragment;
 import org.opendatakit.scan.fragments.InstructionsFragment;
 import org.opendatakit.scan.fragments.MainMenuFragment;
 import org.opendatakit.scan.fragments.ScanPreferencesFragment;
+import org.opendatakit.scan.services.ProcessFormsService;
 import org.opendatakit.scan.utils.ScanUtils;
 
 public class MainActivity extends BaseActivity
@@ -332,6 +334,87 @@ public class MainActivity extends BaseActivity
   @Override
   public String getAppName() {
     return ScanUtils.getODKAppName();
+  }
+
+  public void testProcessFormsService() {
+    final String MNH_TEMPLATE_PATH =
+        "/sdcard/opendatakit/tables/config/scan/form_templates/ordMNH";
+    final String IMAGE_FOLDER_PATH = "file:///sdcard/TestData5";
+    final String IMAGE_PATH = "file:///sdcard/TestData5/11_photo.jpg";
+
+    String[] templatePaths = { MNH_TEMPLATE_PATH };
+
+    Intent processPhoto0 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto0.putExtra("templatePaths", templatePaths);
+    processPhoto0.putExtra("opCode", R.integer.existing_image);
+    processPhoto0.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto0);
+
+    Intent processPhoto1 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto1.putExtra("templatePaths", templatePaths);
+    processPhoto1.putExtra("opCode", R.integer.existing_image);
+    processPhoto1.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto1);
+
+    Intent processPhoto2 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto2.putExtra("templatePaths", templatePaths);
+    processPhoto2.putExtra("opCode", R.integer.existing_image);
+    processPhoto2.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto2);
+
+    Intent processPhoto3 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto3.putExtra("templatePaths", templatePaths);
+    processPhoto3.putExtra("opCode", R.integer.existing_image);
+    processPhoto3.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto3);
+
+    Intent processPhoto4 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto4.putExtra("templatePaths", templatePaths);
+    processPhoto4.putExtra("opCode", R.integer.existing_image);
+    processPhoto4.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto4);
+
+    Intent processPhoto5 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto5.putExtra("templatePaths", templatePaths);
+    processPhoto5.putExtra("opCode", R.integer.existing_image);
+    processPhoto5.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto5);
+
+    Intent processPhoto6 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto6.putExtra("templatePaths", templatePaths);
+    processPhoto6.putExtra("opCode", R.integer.existing_image);
+    processPhoto6.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto6);
+
+    Intent processPhoto7 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto7.putExtra("templatePaths", templatePaths);
+    processPhoto7.putExtra("opCode", R.integer.existing_image);
+    processPhoto7.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto7);
+
+    Intent processPhoto8 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto8.putExtra("templatePaths", templatePaths);
+    processPhoto8.putExtra("opCode", R.integer.existing_image);
+    processPhoto8.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto8);
+
+    Intent processPhoto9 = new Intent(getApplication(), ProcessFormsService.class);
+    processPhoto9.putExtra("templatePaths", templatePaths);
+    processPhoto9.putExtra("opCode", R.integer.existing_image);
+    processPhoto9.putExtra("uri", IMAGE_PATH);
+    startService(processPhoto9);
+
+    /*
+
+    Intent processFolder0 = new Intent(getApplication(), ProcessFormsService.class);
+    processFolder0.putExtra("templatePaths", templatePaths);
+    processFolder0.putExtra("opCode", R.integer.image_directory);
+    processFolder0.putExtra("uri", IMAGE_FOLDER_PATH);
+    processFolder0.putExtra("isRecursive", false);
+    startService(processFolder0);
+    */
+
+
   }
 
 }

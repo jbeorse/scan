@@ -14,6 +14,8 @@
 
 package org.opendatakit.scan;
 
+import android.support.test.espresso.IdlingPolicies;
+import org.junit.Before;
 import org.opendatakit.scan.activities.MainActivity;
 
 import org.junit.Rule;
@@ -23,6 +25,9 @@ import org.junit.runner.RunWith;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
@@ -51,6 +56,24 @@ public class AppSettingsActivityTest {
   @Test
   public void dummyTest() {
     assert (true);
+  }
+
+  @Before
+  public void initTests() {
+    extendIdleWaitTimeout();
+  }
+
+  @Test
+  public void testForCrash() {
+
+
+    mActivityRule.getActivity().testProcessFormsService();
+
+    try {
+      Thread.sleep(300000);
+    } catch (Exception e) {
+    }
+
   }
 
   /*
@@ -180,9 +203,10 @@ public class AppSettingsActivityTest {
     } catch (RuntimeException e) {
     }
   }
+  */
 
   private void extendIdleWaitTimeout() {
     IdlingPolicies.setMasterPolicyTimeout(10, TimeUnit.MINUTES);
   }
-  */
+
 }

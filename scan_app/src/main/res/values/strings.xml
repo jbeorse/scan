@@ -77,6 +77,8 @@
     <string name="error_failed_create_config">Failed to create JSON config.</string>
     <string name="error_uri_not_found">No file URI was found.</string>
     <string name="error_photo_name_not_found">No photo name was found.</string>
+    <string name="no_id">none</string>
+    <string name="no_id_found">No ID was found in intent.</string>
 
     <!-- DisplayProcessedFormActivity -->
     <string name="next_page">Scan Next Page</string>

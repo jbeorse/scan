@@ -25,6 +25,8 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.provider.SyncStateContract;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import com.bubblebot.jni.Processor;
 import org.apache.commons.io.FileUtils;
@@ -39,6 +41,8 @@ import org.opendatakit.scan.utils.ScanUtils;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Phaser;
 
 /**
  * This service invokes the cpp image processing code to run in the background.
@@ -49,6 +53,8 @@ public class ProcessFormsService extends IntentService {
   private static final String LOG_TAG = "ODKScan ProcessForms";
   private static final String NOTIFICATION_APP_TITLE = "ODK Scan";
 
+  private CountDownLatch finishedProcessingLatch;
+
   public ProcessFormsService() {
     super("ProcessFormsService");
   }
@@ -56,6 +62,8 @@ public class ProcessFormsService extends IntentService {
   @Override
   public void onHandleIntent(Intent intent) {
     Log.i(LOG_TAG, "Handling Intent to process form");
+
+//    finishedProcessingLatch = new CountDownLatch(1);
 
     // Retrieve input parameters
     final Bundle extras = intent.getExtras();
@@ -181,6 +189,8 @@ public class ProcessFormsService extends IntentService {
       Log.e(LOG_TAG, e.toString());
       return;
     }
+
+//    finishedProcessingLatch.countDown();
   }
 
   /**
@@ -327,5 +337,11 @@ public class ProcessFormsService extends IntentService {
     resultNotification.flags |= Notification.FLAG_AUTO_CANCEL;
     notificationManager.notify(notificationId, resultNotification);
   }
+
+  // Programmatic notification of execution complete
+  public void setFinishedProcessingLatch(CountDownLatch latch) {
+    this.finishedProcessingLatch = latch;
+  }
+
 
 }
