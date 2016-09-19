@@ -1,0 +1,2235 @@
+{
+	"height": 850,
+	"width": 1100,
+	"fields": [
+		{
+			"order": "1",
+			"type": "string",
+			"name": "PIN",
+			"displayText": "Patient ID Num",
+			"delim_type": "-",
+			"num_group": 3,
+			"element_each_group": [
+				3,
+				3,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 150,
+					"segment_y": 140,
+					"segment_width": 250,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 74,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 140,
+							"item_y": 20
+						},
+						{
+							"item_x": 170,
+							"item_y": 20
+						},
+						{
+							"item_x": 206,
+							"item_y": 20
+						},
+						{
+							"item_x": 236,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "2",
+			"type": "string",
+			"name": "treatment_start_date",
+			"displayText": "Treatment start date",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 20,
+					"segment_y": 280,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "patient_name",
+			"displayText": "Patient name",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 500,
+					"segment_y": 40,
+					"segment_width": 220,
+					"segment_height": 40
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "PIN_province",
+			"displayText": "PIN province",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"A",
+				"B",
+				"K",
+				"F",
+				"G",
+				"P",
+				"S"
+			],
+			"segments": [
+				{
+					"segment_x": 20,
+					"segment_y": 110,
+					"segment_width": 20,
+					"segment_height": 110,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 10,
+							"item_y": 9
+						},
+						{
+							"item_x": 10,
+							"item_y": 24.5
+						},
+						{
+							"item_x": 10,
+							"item_y": 39.5
+						},
+						{
+							"item_x": 10,
+							"item_y": 54.5
+						},
+						{
+							"item_x": 10,
+							"item_y": 69.5
+						},
+						{
+							"item_x": 10,
+							"item_y": 84.5
+						},
+						{
+							"item_x": 10,
+							"item_y": 99.5
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "int",
+			"name": "PIN_district",
+			"displayText": "PIN district",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"param": 2,
+			"segments": [
+				{
+					"segment_x": 60,
+					"segment_y": 140,
+					"segment_width": 60,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 16,
+							"item_y": 20
+						},
+						{
+							"item_x": 43,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "qrcode",
+			"name": "CNIC",
+			"displayText": "CNIC",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 500,
+					"segment_y": 90,
+					"segment_width": 220,
+					"segment_height": 40
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "address",
+			"displayText": "Patient address",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 510,
+					"segment_y": 190,
+					"segment_width": 210,
+					"segment_height": 40
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "int",
+			"name": "age",
+			"displayText": "Patient age",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"param": 2,
+			"segments": [
+				{
+					"segment_x": 620,
+					"segment_y": 140,
+					"segment_width": 60,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 15,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "mobile",
+			"displayText": "Patient mobile",
+			"delim_type": "-",
+			"num_group": 2,
+			"element_each_group": [
+				4,
+				7
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 730,
+					"segment_y": 60,
+					"segment_width": 340,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 17,
+							"item_y": 20
+						},
+						{
+							"item_x": 47,
+							"item_y": 20
+						},
+						{
+							"item_x": 77,
+							"item_y": 20
+						},
+						{
+							"item_x": 107,
+							"item_y": 20
+						},
+						{
+							"item_x": 143,
+							"item_y": 20
+						},
+						{
+							"item_x": 173,
+							"item_y": 20
+						},
+						{
+							"item_x": 203,
+							"item_y": 20
+						},
+						{
+							"item_x": 233,
+							"item_y": 20
+						},
+						{
+							"item_x": 263,
+							"item_y": 20
+						},
+						{
+							"item_x": 293,
+							"item_y": 20
+						},
+						{
+							"item_x": 323,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "facility_name",
+			"displayText": "Facility name",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 830,
+					"segment_y": 130,
+					"segment_width": 110,
+					"segment_height": 40
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "facility_code",
+			"displayText": "Facility code",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 830,
+					"segment_y": 190,
+					"segment_width": 110,
+					"segment_height": 40
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "new_case",
+			"displayText": "New case",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"new case"
+			],
+			"segments": [
+				{
+					"segment_x": 250,
+					"segment_y": 280,
+					"segment_width": 20,
+					"segment_height": 30,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 11,
+							"item_y": 12
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "transferred_in",
+			"displayText": "Transferred in",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"transferred in"
+			],
+			"segments": [
+				{
+					"segment_x": 340,
+					"segment_y": 280,
+					"segment_width": 20,
+					"segment_height": 30,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 11,
+							"item_y": 12
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "sex",
+			"displayText": "Patient sex",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"male",
+				"female",
+				"TG"
+			],
+			"segments": [
+				{
+					"segment_x": 450,
+					"segment_y": 140,
+					"segment_width": 90,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 15,
+							"item_y": 10
+						},
+						{
+							"item_x": 45,
+							"item_y": 10
+						},
+						{
+							"item_x": 75,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "hist_of_treatment",
+			"displayText": "History of previous treatment",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"Relapse",
+				"Treatment_after_failure",
+				"Treatment_after_LTFU",
+				"Other/unknown"
+			],
+			"segments": [
+				{
+					"segment_x": 630,
+					"segment_y": 240,
+					"segment_width": 20,
+					"segment_height": 80,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 10,
+							"item_y": 13
+						},
+						{
+							"item_x": 10,
+							"item_y": 32
+						},
+						{
+							"item_x": 10,
+							"item_y": 51
+						},
+						{
+							"item_x": 10,
+							"item_y": 70
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "site",
+			"displayText": "Site",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"P",
+				"EP"
+			],
+			"segments": [
+				{
+					"segment_x": 900,
+					"segment_y": 270,
+					"segment_width": 20,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 10,
+							"item_y": 13
+						},
+						{
+							"item_x": 10,
+							"item_y": 31
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "treatment_category",
+			"displayText": "Treatment category",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"CAT-1",
+				"CAT-2"
+			],
+			"segments": [
+				{
+					"segment_x": 1000,
+					"segment_y": 270,
+					"segment_width": 20,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 10,
+							"item_y": 13
+						},
+						{
+							"item_x": 10,
+							"item_y": 31
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "smear_date_month0",
+			"displayText": "Smear date Month 0",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 80,
+					"segment_y": 380,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "smear_date_month5",
+			"displayText": "Smear date Month 5",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 610,
+					"segment_y": 380,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "smear_date_end_treatmt",
+			"displayText": "Smear date End of Treatment",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 880,
+					"segment_y": 380,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "int",
+			"name": "scanty_month0",
+			"displayText": "Scanty result Month 0",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"param": 1,
+			"segments": [
+				{
+					"segment_x": 60,
+					"segment_y": 460,
+					"segment_width": 30,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 15,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "int",
+			"name": "scanty_month5",
+			"displayText": "Scanty result Month 5",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"param": 1,
+			"segments": [
+				{
+					"segment_x": 590,
+					"segment_y": 460,
+					"segment_width": 30,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 15,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "int",
+			"name": "scanty_end_treatmt",
+			"displayText": "Scanty result End of Treatment",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"param": 1,
+			"segments": [
+				{
+					"segment_x": 860,
+					"segment_y": 460,
+					"segment_width": 30,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 15,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "xpert_date_month0",
+			"displayText": "Xpert date Month 0",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 80,
+					"segment_y": 550,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "xpert_date_month5",
+			"displayText": "Xpert date Month 5",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 610,
+					"segment_y": 550,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "xpert_date_end_treatmt",
+			"displayText": "Xpert date End of Treatment",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 880,
+					"segment_y": 550,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "xpert_result_month0",
+			"displayText": "Xpert result Month0",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"T",
+				"RR",
+				"TI",
+				"N",
+				"I"
+			],
+			"segments": [
+				{
+					"segment_x": 120,
+					"segment_y": 610,
+					"segment_width": 140,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 16,
+							"item_y": 10
+						},
+						{
+							"item_x": 43.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 70.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 97.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 124.5,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "xpert_result_month5",
+			"displayText": "Xpert result Month 5",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"T",
+				"RR",
+				"TI",
+				"N",
+				"I"
+			],
+			"segments": [
+				{
+					"segment_x": 660,
+					"segment_y": 610,
+					"segment_width": 140,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 16,
+							"item_y": 10
+						},
+						{
+							"item_x": 43.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 70.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 97.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 124.5,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "xpert_result_end_treatmt",
+			"displayText": "Xpert result End of Treatment",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"T",
+				"RR",
+				"TI",
+				"N",
+				"I"
+			],
+			"segments": [
+				{
+					"segment_x": 940,
+					"segment_y": 610,
+					"segment_width": 130,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 13,
+							"item_y": 10
+						},
+						{
+							"item_x": 39,
+							"item_y": 10
+						},
+						{
+							"item_x": 65,
+							"item_y": 10
+						},
+						{
+							"item_x": 91,
+							"item_y": 10
+						},
+						{
+							"item_x": 117,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "qrcode",
+			"name": "district_qr",
+			"displayText": "District ",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 970,
+					"segment_y": 130,
+					"segment_width": 100,
+					"segment_height": 100
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "culture_notes",
+			"displayText": "Culture notes",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 20,
+					"segment_y": 670,
+					"segment_width": 1060,
+					"segment_height": 60
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "date_treatment_outcome",
+			"displayText": "Date Treatment Outcome",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 230,
+					"segment_y": 740,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "treatment_outcome",
+			"displayText": "Treatment Outcome",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"cured",
+				"Treatment_Completed",
+				"Treatment_Failure",
+				"Died",
+				"Loss_to_follow_up",
+				"Not_Evaluated"
+			],
+			"segments": [
+				{
+					"segment_x": 50,
+					"segment_y": 820,
+					"segment_width": 320,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 29,
+							"item_y": 10
+						},
+						{
+							"item_x": 81,
+							"item_y": 10
+						},
+						{
+							"item_x": 133,
+							"item_y": 10
+						},
+						{
+							"item_x": 185,
+							"item_y": 10
+						},
+						{
+							"item_x": 237,
+							"item_y": 10
+						},
+						{
+							"item_x": 289,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "ref_second_line",
+			"displayText": "Referred for second line",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"yes",
+				"no"
+			],
+			"segments": [
+				{
+					"segment_x": 450,
+					"segment_y": 770,
+					"segment_width": 20,
+					"segment_height": 50,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 10,
+							"item_y": 17
+						},
+						{
+							"item_x": 10,
+							"item_y": 38
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "remarks",
+			"displayText": "General remarks",
+			"verify": "Yes",
+			"segments": [
+				{
+					"segment_x": 540,
+					"segment_y": 750,
+					"segment_width": 510,
+					"segment_height": 90
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "smear_result_end_treatmt",
+			"displayText": "Smear result Month 0",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"scanty(1-9)",
+				"+(10-99)",
+				"++(1-10)",
+				"+++(>10)"
+			],
+			"segments": [
+				{
+					"segment_x": 880,
+					"segment_y": 470,
+					"segment_width": 190,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 20,
+							"item_y": 10
+						},
+						{
+							"item_x": 66,
+							"item_y": 10
+						},
+						{
+							"item_x": 112,
+							"item_y": 10
+						},
+						{
+							"item_x": 158,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "smear_result_m0",
+			"displayText": "Smear result Month 0",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"scanty(1-9)",
+				"+(10-99)",
+				"++(1-10)",
+				"+++(>10)"
+			],
+			"segments": [
+				{
+					"segment_x": 80,
+					"segment_y": 470,
+					"segment_width": 190,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 20,
+							"item_y": 10
+						},
+						{
+							"item_x": 66,
+							"item_y": 10
+						},
+						{
+							"item_x": 112,
+							"item_y": 10
+						},
+						{
+							"item_x": 158,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "smear_result_m5",
+			"displayText": "Smear result Month 0",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"scanty(1-9)",
+				"+(10-99)",
+				"++(1-10)",
+				"+++(>10)"
+			],
+			"segments": [
+				{
+					"segment_x": 610,
+					"segment_y": 470,
+					"segment_width": 190,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 20,
+							"item_y": 10
+						},
+						{
+							"item_x": 66,
+							"item_y": 10
+						},
+						{
+							"item_x": 112,
+							"item_y": 10
+						},
+						{
+							"item_x": 158,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "date_registration",
+			"displayText": "Date of registration",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 150,
+					"segment_y": 40,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "xpert_date_month2_3",
+			"displayText": "Xpert date Month 2/3",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 350,
+					"segment_y": 550,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "smear_result_m2_3",
+			"displayText": "Smear result Month 0",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"scanty(1-9)",
+				"+(10-99)",
+				"++(1-10)",
+				"+++(>10)"
+			],
+			"segments": [
+				{
+					"segment_x": 350,
+					"segment_y": 470,
+					"segment_width": 190,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 20,
+							"item_y": 10
+						},
+						{
+							"item_x": 66,
+							"item_y": 10
+						},
+						{
+							"item_x": 112,
+							"item_y": 10
+						},
+						{
+							"item_x": 158,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "string",
+			"name": "smear_date_month2_3",
+			"displayText": "Smear date Month 2/3",
+			"delim_type": "/",
+			"num_group": 3,
+			"element_each_group": [
+				2,
+				2,
+				2
+			],
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 28,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"segments": [
+				{
+					"segment_x": 350,
+					"segment_y": 380,
+					"segment_width": 190,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 14,
+							"item_y": 20
+						},
+						{
+							"item_x": 44,
+							"item_y": 20
+						},
+						{
+							"item_x": 80,
+							"item_y": 20
+						},
+						{
+							"item_x": 110,
+							"item_y": 20
+						},
+						{
+							"item_x": 146,
+							"item_y": 20
+						},
+						{
+							"item_x": 176,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "select1",
+			"name": "xpert_result_month2_3",
+			"displayText": "Xpert result Month 2/3",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "bubbles",
+				"classification_map": {
+					"empty": false
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false
+				}
+			},
+			"param": "yes_no",
+			"grid_values": [
+				"T",
+				"RR",
+				"TI",
+				"N",
+				"I"
+			],
+			"segments": [
+				{
+					"segment_x": 390,
+					"segment_y": 610,
+					"segment_width": 140,
+					"segment_height": 20,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 16,
+							"item_y": 10
+						},
+						{
+							"item_x": 43.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 70.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 97.5,
+							"item_y": 10
+						},
+						{
+							"item_x": 124.5,
+							"item_y": 10
+						}
+					]
+				}
+			]
+		},
+		{
+			"order": "",
+			"type": "int",
+			"name": "scanty_month2_3",
+			"displayText": "Scanty result Month 2/3",
+			"verify": "Yes",
+			"classifier": {
+				"classifier_height": 20,
+				"classifier_width": 20,
+				"training_data_uri": "numbers",
+				"classification_map": {
+					"0": "0",
+					"1": "1",
+					"2": "2",
+					"3": "3",
+					"4": "4",
+					"5": "5",
+					"6": "6",
+					"7": "7",
+					"8": "8",
+					"9": "9"
+				},
+				"default_classification": true,
+				"advanced": {
+					"flip_training_data": false,
+					"eigenvalues": 13
+				}
+			},
+			"param": 1,
+			"segments": [
+				{
+					"segment_x": 330,
+					"segment_y": 460,
+					"segment_width": 30,
+					"segment_height": 40,
+					"align_segment": false,
+					"items": [
+						{
+							"item_x": 15,
+							"item_y": 20
+						}
+					]
+				}
+			]
+		}
+	]
+}
